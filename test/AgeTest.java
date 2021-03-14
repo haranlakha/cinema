@@ -6,7 +6,7 @@ public class AgeTest {
     public void testAge(){
 
     Customer testCustomer = new Customer();
-    Film testFilm = new Film("Title", 10.00, 18, "Category", "Format");
+    Film testFilm = new Film("Title", 10.00, 18, "18");
 
     testCustomer.setAge(18);
 
