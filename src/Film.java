@@ -12,8 +12,8 @@ public class Film {
         this.noOfTickets = noOfTickets;
     }
 
-    public void buyTicket(){
-        this.noOfTickets--;
+    public void buyTicket(int n){
+        this.noOfTickets -= n;
     }
 }
 
