@@ -10,7 +10,7 @@ public class AgeTest {
 
     testCustomer.setAge(18);
 
-        if(testCustomer.checkAge(testCustomer.getAge(), testFilm.certification)){
+        if(testCustomer.checkAge(testCustomer.getAge(), testFilm.getCertification())){
             assertTrue(true);
         }else{
             fail();

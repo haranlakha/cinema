@@ -50,8 +50,8 @@ public class Main {
         System.out.printf("\n| %s | %-13s | %s | %-6s | %-7s | \n", headNum, headTitle, headPrice, headRating, headTickets);
 
         for (int i = 0; i < filmList.size(); i++) {
-            System.out.printf("| %d | %-13s | £%s | %-6s | %-7d | \n", (i+1), filmList.get(i).title,
-                    filmList.get(i).price, filmList.get(i).certString, filmList.get(i).noOfTickets);
+            System.out.printf("| %d | %-13s | £%s | %-6s | %-7d | \n", (i+1), filmList.get(i).getTitle(),
+                    filmList.get(i).getPrice(), filmList.get(i).getCertString(), filmList.get(i).getNoOfTickets());
         }
         System.out.println();
     }
@@ -67,23 +67,23 @@ public class Main {
 
         selection = input-1; //no of users film selection
 
-        if(newCustomer.checkAge(newCustomer.getAge(), filmList.get(selection).certification)){
-            System.out.println("You are old enough to watch " + filmList.get(selection).title + "!");
+        if(newCustomer.checkAge(newCustomer.getAge(), filmList.get(selection).getCertification())){
+            System.out.println("You are old enough to watch " + filmList.get(selection).getTitle() + "!");
             buyTickets(selection);
         }else{
-            System.out.println("You are not old enough to watch " + filmList.get(selection).title + "!");
+            System.out.println("You are not old enough to watch " + filmList.get(selection).getTitle() + "!");
             System.exit(0);
         }
     }
 
     public static void buyTickets(int selection){
 
-        System.out.println(filmList.get(selection).title + ": " + filmList.get(selection).noOfTickets);
+        System.out.println(filmList.get(selection).getTitle() + ": " + filmList.get(selection).getNoOfTickets());
         System.out.println("How many tickets do you want to buy?");
 
         numTickets = scnr.nextInt();
 
-        if(numTickets > filmList.get(selection).noOfTickets){
+        if(numTickets > filmList.get(selection).getNoOfTickets()){
             char c;
             System.out.println("Sorry, there are not enough tickets available!");
             do{
@@ -113,10 +113,10 @@ public class Main {
 
         System.out.println("-------RECEIPT-------");
         System.out.println("Customer: " + newCustomer.getName());
-        System.out.println("Film: " + filmList.get(selection).title);
-        System.out.println("Rating: " + filmList.get(selection).certString);
+        System.out.println("Film: " + filmList.get(selection).getTitle());
+        System.out.println("Rating: " + filmList.get(selection).getCertString());
         System.out.println("No. of tickets: " + numTickets);
-        System.out.println("Price: £" + filmList.get(selection).price * numTickets + "\n");
+        System.out.println("Price: £" + filmList.get(selection).getPrice() * numTickets + "\n");
         System.out.println(formattedDate + "\n");
     }
 }
