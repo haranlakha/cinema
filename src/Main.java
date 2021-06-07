@@ -5,7 +5,7 @@ import java.util.*;
 public class Main {
 
     static Scanner scnr = new Scanner(System.in);
-    static List<Film> filmList = new ArrayList<>(); //list to store films
+    static ArrayList<Film> filmList = new ArrayList<>(); //list to store films
     static Customer newCustomer = new Customer(); //new customer object
 
     static int selection;
@@ -25,7 +25,7 @@ public class Main {
         printReceipt(numTickets, selection);
     }
 
-    private static void addFilms(Film taxiDriver, Film joker, Film spiritedAway, Film toyStory4) {
+    public static void addFilms(Film taxiDriver, Film joker, Film spiritedAway, Film toyStory4) {
 
         filmList.add(taxiDriver);
         filmList.add(spiritedAway);

@@ -3,7 +3,7 @@ import static org.junit.jupiter.api.Assertions.*;
 public class UsernameNotNullTest {
 
     @Test
-    public void TestName(){
+    public void testNameNotNull(){
         //tests if customer name is not null
         Customer testCustomer = new Customer();
 
