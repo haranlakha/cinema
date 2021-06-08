@@ -1,8 +1,10 @@
 public class Film {
     //class which contains attributes for basic film info
-    private String title, certString;
-    private double price;
-    private int certification, noOfTickets;
+    private final String title;
+    private final String certString;
+    private final double price;
+    private final int certification;
+    private int noOfTickets;
 
     public Film(String filmTitle, double filmPrice, int filmCert, String filmCertString, int filmTickets) {
         title = filmTitle;
